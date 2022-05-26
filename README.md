@@ -10,3 +10,5 @@ Front-End|
 HTML |
 CSS | 
 JavaScript |
+Bootstrap |
+VSCode |
