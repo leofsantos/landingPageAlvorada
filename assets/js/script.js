@@ -5,12 +5,14 @@ let phone = document.querySelector('#phone')
 let observation = document.querySelector('#observation')
 let checkIn = document.querySelector('#checkIn')
 let checkOut = document.querySelector('#checkOut')
+let room = document.querySelector('#room')
 let firstNameOk = false
 let surnameOk = false
 let emailOk = false
 let phoneOk = false
 let checkInOk = false
 let checkOutOk = false
+let roomOk = false
 
 
 function validatesFirstName() {
@@ -40,9 +42,10 @@ function validatesSurname() {
 
 function validatesEmail() {
     let txtEmail = document.querySelector('#txtEmail')
-    if(email.value.indexOf('@') == -1 || email.value.indexOf('.')==-1){
+    if(email.value.indexOf('@') == -1 || email.value.indexOf('.co')==-1){
         txtEmail.innerHTML = 'Invalid email'
         txtEmail.style.color = 'red'
+        
     } else {
         txtEmail.innerHTML = 'Valid email'
         txtEmail.style.color = 'green'
@@ -83,6 +86,18 @@ function validatesCheckOut() {
         txtCheckOut.innerHTML = "Valid date";
         txtCheckOut.style.color = "green";
         checkOutOk = true
+    }
+}
+
+function validatesRoom() {
+    let txtRoom = document.querySelector("#txtRoom");
+    if (!room.value) {
+        txtRoom.innerHTML = "You must selec an option";
+        txtRoom.style.color = "red";
+    } else {
+        txtRoom.innerHTML = "Valid option";
+        txtRoom.style.color = "green";
+        roomOk = true
     }
 }
 
